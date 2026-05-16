@@ -218,6 +218,22 @@ T1. COVER
     opposite corner from the logo, 96 pt Bold White. Subtitle
     below in Gold, 36 pt Medium. Version + date in white, bottom
     inside the safe margin, aligned with the title block.
+    STRICTLY NO kicker text above the title.
+    STRICTLY NO 6px gold accent line between title and subtitle.
+    Source of truth: slides/ArabicCoverSlide.html (RTL) and
+    slides/CoverSlide.html (LTR). Match those exactly.
+
+T-CLOSING. CLOSING SLIDE (MANDATORY COMPOSITION)
+    Dark background. Centered large logo (TMD-logo-white.svg,
+    ~520 px wide) with the "A TTP Company" lockup visible.
+    Directly below the logo, a single thanks line:
+        Arabic decks:  شكرًا لكم
+        English decks: Thank You
+    NOTHING ELSE. No subtitle, no kicker, no contact info,
+    no page number, no footnote, no accent line, no decoration
+    of any kind. The closing slide is ALWAYS this exact layout.
+    Source of truth: slides/ArabicClosingSlide.html (RTL) and
+    slides/ClosingSlide.html (LTR).
 
 T2. SECTION DIVIDER
     Dark background. Massive faded section number (440 px Bold)

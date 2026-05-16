@@ -25,6 +25,20 @@ Full reference, including the AI-platform prompt, lives in
 ## R5 · Geometry
 - Radii: 0 (sharp) or 2–4px max. No pill shapes. Rings and percentage dials use circular SVG, not rounded rectangles.
 
+## R5b · Cover Slide (T1) — strict composition
+- The Cover slide carries **only**: standalone logo + main title + subtitle + version/date. Nothing else.
+- **No kicker** (e.g. "PARTNERSHIP DECK · 2026", "عرض الشراكة · 2026") above the title.
+- **No 6px gold accent line** between the title and subtitle.
+- Source of truth: `Ar/CoverSlide.html` (RTL) and `EN/CoverSlide.html` (LTR). When in doubt, match those exactly.
+
+## R5c · Closing Slide (T-Closing) — mandatory composition
+- The Closing slide is ALWAYS: dark background, **centered large logo** (`TMD-logo-white.svg`, ~520px wide) with the "A TTP Company" lockup visible, and a single thanks line directly beneath it.
+- Thanks line copy:
+  - Arabic decks: **شكرًا لكم**
+  - English decks: **Thank You**
+- **Nothing else.** No subtitle, no kicker, no contact info, no page number, no footnote, no accent line, no decoration of any kind.
+- Source of truth: `Ar/ClosingSlide.html` (RTL) and `EN/ClosingSlide.html` (LTR). Match those exactly.
+
 ## R6 · Emoji
 - Never. In any asset.
 
@@ -71,5 +85,6 @@ Each template has both an English (LTR) and Arabic (RTL) file.
 | T17 | Photo Grid (3 × 2) | `PhotoGridSlide.html` / `ArabicPhotoGridSlide.html` |
 | T18 | Photo with Stat | `PhotoStatSlide.html` / `ArabicPhotoStatSlide.html` |
 | T19 | Photo Quote | `PhotoQuoteSlide.html` / `ArabicPhotoQuoteSlide.html` |
+| T-Closing | Closing (centered logo + thanks) | `ClosingSlide.html` / `ArabicClosingSlide.html` |
 
-See `colors_and_type.css` for the full token set and `slides/slides.css` for the shared slide foundation (page number, header sizes, footnote, RTL mirroring).
+See `colors_and_type.css` for the full token set and `slides.css` for the shared slide foundation (page number, header sizes, footnote, RTL mirroring).

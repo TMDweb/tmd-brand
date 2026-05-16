@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TMD · RTL cover</title>
+<link rel="stylesheet" href="../slides.css">
+<style>
+  body { background: #f0f2f9; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+
+  .cover { padding: 0; position: relative; direction: rtl; }
+
+  /* Logo — top-left (RTL: end position; mirror of English) */
+  .cover .logo {
+    position: absolute;
+    top: 56px;
+    left: 72px;
+    right: auto;
+    height: 170px;
+    width: auto;
+    display: block;
+  }
+
+  /* Title block — bottom-right (RTL: start) */
+  .cover .text-block {
+    position: absolute;
+    right: 80px;
+    left: auto;
+    bottom: 200px;
+    max-width: 1100px;
+    text-align: right;
+  }
+  .cover .title {
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 1.05;
+    color: #ffffff;
+    margin: 0 0 18px 0;
+  }
+  .cover .subtitle {
+    font-size: 36px;
+    color: #fcbf2c;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  /* Version + date — bottom-right */
+  .cover .versioning {
+    position: absolute;
+    right: 80px;
+    left: auto;
+    bottom: 64px;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.5;
+    text-align: right;
+  }
+  .cover .versioning .v { display: block; }
+  .cover .versioning .d { display: block; }
+</style>
+</head>
+<body>
+  <section data-screen-label="08 RTL cover" class="slide dark cover">
+    <img class="logo" src="../assets/TMD-logo-white.svg" alt="The Marketing Department">
+
+    <div class="text-block">
+      <h1 class="title">العنوان الرئيس هنا</h1>
+      <p class="subtitle">العنوان الفرعي هنا</p>
+    </div>
+
+    <div class="versioning">
+      <span class="v">النسخة</span>
+      <span class="d">التاريخ</span>
+    </div>
+  </section>
+</body>
+</html>

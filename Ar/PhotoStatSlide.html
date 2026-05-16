@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>TMD · RTL Photo with stat</title>
+<link rel="stylesheet" href="../slides.css">
+<style>
+  body { background: #f0f2f9; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+  .pws .photo { position: absolute; right: 0; top: 0; bottom: 0; left: 38%; object-fit: cover; width: auto; height: 100%; display: block; }
+  /* RTL mirror: panel on the left side */
+  .pws .panel {
+    position: absolute; left: 0; top: 0; bottom: 0; width: 38%;
+    background: #0C0E1D;
+    padding: 80px 56px;
+    display: flex; flex-direction: column; justify-content: center; gap: 18px;
+    color: #fff;
+    text-align: right;
+  }
+  .pws .panel .tag { font-size: 13px; font-weight: 700; color: #fcbf2c; }
+  .pws .panel .n { font-size: 128px; font-weight: 700; line-height: 0.9; color: #fff; direction: ltr; text-align: right; }
+  .pws .panel .n small { font-size: 0.4em; color: #fcbf2c; font-weight: 600; }
+  .pws .panel h3 { margin: 0; font-size: 28px; font-weight: 700; color: #fff; }
+  .pws .panel p { margin: 0; font-size: 15px; line-height: 1.75; color: #f0f2f9; max-width: 320px; }
+
+  .pws .page-num { color: #fff; }
+</style>
+</head>
+<body>
+  <section data-screen-label="18 صورة مع رقم" class="slide dark pws rtl">
+    <img class="photo" src="../assets/photos/flag-man.jpg" alt="">
+    <div class="page-num">18</div>
+    <div class="panel">
+      <span class="tag">اليوم الوطني 2025</span>
+      <div class="n">8.4<small>M</small></div>
+      <h3>وصول في 14 يومًا</h3>
+      <p>موجز واحد، تصميم واحد، كل المناطق. مكتسب ومدفوع ومملوك، وصول صافي خلال نافذة الحملة.</p>
+    </div>
+  </section>
+</body>
+</html>

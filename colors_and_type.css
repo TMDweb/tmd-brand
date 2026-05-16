@@ -120,7 +120,7 @@
   --tmd-radius-pill:   999px;
   --tmd-border-hair:   1px;
   --tmd-border-thin:   2px;
-  --tmd-accent-line:   6px;   /* Cover accent gold horizontal line */
+  --tmd-accent-line:   6px;   /* Generic gold divider element. NOT used on the Cover slide. */
 
   /* No shadow system — TMD forbids depth/gradients. Use borders + lines. */
   --tmd-shadow-none:   none;

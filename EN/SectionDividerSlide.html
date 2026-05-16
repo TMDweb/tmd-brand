@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TMD · Section divider</title>
+<link rel="stylesheet" href="../slides.css">
+<style>
+  body { background: #f0f2f9; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+
+  .sd { padding: 0; position: relative; }
+
+  /* Page number — tiny, top-right for LTR */
+  .sd .page-num {
+    position: absolute;
+    top: 36px;
+    right: 48px;
+    left: auto;
+    font-size: 18px;
+    font-weight: 400;
+    color: #f0f2f9;
+  }
+
+  /* Massive faded section number — left side, deep background, inside safe area */
+  .sd .bignum {
+    position: absolute;
+    left: 64px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 440px;
+    font-weight: 800;
+    line-height: 0.8;
+    color: #11152A;
+    user-select: none;
+    z-index: 1;
+  }
+
+  /* Text block — to the right of the big number */
+  .sd .content {
+    position: absolute;
+    left: 470px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    max-width: 740px;
+    text-align: left;
+  }
+  .sd .kicker {
+    font-size: 28px;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    }
+  .sd .name {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.05;
+    color: #ffffff;
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+  <section data-screen-label="02 Section divider" class="slide dark sd">
+    <div class="page-num">5</div>
+    <div class="bignum">01</div>
+    <div class="content">
+      <p class="kicker">Section Title</p>
+      <h2 class="name">Subsection or next slides title</h2>
+    </div>
+  </section>
+</body>
+</html>

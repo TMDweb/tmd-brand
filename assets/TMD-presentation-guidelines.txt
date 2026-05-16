@@ -75,9 +75,13 @@
 [ 5. Slide Master Layouts ]
   → Cover Slide (Dark)
     • Background: #0C0E1D
+    • Logo: Standalone, top corner, ~170 px tall
     • Main Title: #ffffff Bold (Large)
     • Subtitle: #fcbf2c
-    • Element: 6px horizontal Accent Gold line
+    • Version + Date: #ffffff, bottom inside the safe margin
+    ⛔ No kicker (e.g. "PARTNERSHIP DECK · 2026")
+    ⛔ No 6px gold accent line on the cover
+    ✅ Source of truth: slides/ArabicCoverSlide.html / slides/CoverSlide.html
 
   → Section Divider (Dark)
     • Background: #0C0E1D

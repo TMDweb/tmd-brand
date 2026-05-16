@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TMD · Agenda slide</title>
+<link rel="stylesheet" href="../slides.css">
+<style>
+  body { background: #f0f2f9; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+
+  .ag { padding: 0; position: relative; }
+
+  /* Title — top-left */
+  .ag .title-block {
+    position: absolute;
+    top: 56px;
+    left: 80px;
+  }
+  .ag .title-block .title { font-size: 37px; font-weight: 700; color: #ffffff; margin: 0; }   /* 28pt */
+
+  /* Page number — top-right */
+  .ag .page-num {
+    position: absolute;
+    top: 36px;
+    right: 48px;
+    left: auto;
+    font-size: 16px;
+    font-weight: 400;
+    color: #f0f2f9;
+    }
+
+  /* List */
+  .ag .items {
+    position: absolute;
+    top: 140px;
+    left: 80px;
+    right: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .item {
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+    height: 50px;
+  }
+  .item .box {
+    width: 50px;
+    background: #fcbf2c;
+    color: #0C0E1D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 24px;
+    font-family: var(--tmd-font);
+    flex-shrink: 0;
+  }
+  .item .bar {
+    flex: 1;
+    border: 1px dashed rgba(252,191,44,0.45);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  /* Logo — bottom-right */
+  .ag .logo {
+    position: absolute;
+    bottom: 48px;
+    right: 64px;
+    height: 110px;
+    width: auto;
+  }
+</style>
+</head>
+<body>
+  <section data-screen-label="03 Agenda" class="slide dark ag">
+    <div class="page-num">2</div>
+    <div class="title-block">
+      <h1 class="title">Table of Contents</h1>
+    </div>
+
+    <div class="items">
+      <div class="item"><span class="box">1</span><span class="bar"></span></div>
+      <div class="item"><span class="box">2</span><span class="bar"></span></div>
+      <div class="item"><span class="box">3</span><span class="bar"></span></div>
+      <div class="item"><span class="box">4</span><span class="bar"></span></div>
+      <div class="item"><span class="box">5</span><span class="bar"></span></div>
+      <div class="item"><span class="box">6</span><span class="bar"></span></div>
+      <div class="item"><span class="box">7</span><span class="bar"></span></div>
+      <div class="item"><span class="box">8</span><span class="bar"></span></div>
+    </div>
+
+    <img class="logo" src="../assets/TMD-logo-white.svg" alt="TMD">
+  </section>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TMD · Pros vs cons</title>
+<link rel="stylesheet" href="../slides.css">
+<style>
+  body { background: #f0f2f9; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+  .pc .body { position: absolute; top: 220px; left: 64px; right: 64px; bottom: 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .pc .col { display: flex; flex-direction: column; gap: 14px; padding: 28px; background: #fff; }
+  .pc .col h4 {
+    margin: 0; font-size: 22px; font-weight: 700; color: #0C0E1D;
+    padding-bottom: 14px;
+  }
+  .pc .col.pros h4 { border-bottom: 6px solid #33716b; }   /* TMD Teal — our green */
+  .pc .col.cons h4 { border-bottom: 6px solid #92112d; }   /* TMD Pink */
+  .pc .col ul { list-style: none; padding: 0; margin: 6px 0 0; display: flex; flex-direction: column; gap: 12px; }
+  .pc .col li {
+    font-size: 16px; line-height: 1.55; color: #0C0E1D;
+    display: grid; grid-template-columns: 22px 1fr; gap: 12px; align-items: start;
+  }
+  .pc .col li svg { width: 22px; height: 22px; flex-shrink: 0; margin-top: 1px; }
+</style>
+</head>
+<body>
+  <section data-screen-label="13 Pros vs cons" class="slide light pc">
+    <div class="page-num">13</div>
+    <div class="header">
+      <div class="title">The Tradeoff, Honestly</div>
+      <div class="subtitle">Where embedded wins, and where it does not</div>
+    </div>
+    <div class="body">
+      <div class="col pros">
+        <h4>Pros</h4>
+        <ul>
+          <li>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="none" stroke="#33716b" stroke-width="2"/><path d="M7 12.5 L10.5 16 L17 8.5" fill="none" stroke="#33716b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>One team accountable for the whole funnel, not three vendors.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="none" stroke="#33716b" stroke-width="2"/><path d="M7 12.5 L10.5 16 L17 8.5" fill="none" stroke="#33716b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Faster turnaround on briefs, because we sit beside you.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="none" stroke="#33716b" stroke-width="2"/><path d="M7 12.5 L10.5 16 L17 8.5" fill="none" stroke="#33716b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Shared dashboards mean shared evidence, not shared opinions.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="none" stroke="#33716b" stroke-width="2"/><path d="M7 12.5 L10.5 16 L17 8.5" fill="none" stroke="#33716b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>A planned exit means a real handover, not a pricing renewal.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col cons">
+        <h4>Cons</h4>
+        <ul>
+          <li>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="none" stroke="#92112d" stroke-width="2"/><line x1="7" y1="12" x2="17" y2="12" stroke="#92112d" stroke-width="2.2" stroke-linecap="round"/></svg>
+            <span>Onboarding takes four to six weeks before output is steady.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="none" stroke="#92112d" stroke-width="2"/><line x1="7" y1="12" x2="17" y2="12" stroke="#92112d" stroke-width="2.2" stroke-linecap="round"/></svg>
+            <span>Headcount appears on a partner invoice before it appears on yours.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="none" stroke="#92112d" stroke-width="2"/><line x1="7" y1="12" x2="17" y2="12" stroke="#92112d" stroke-width="2.2" stroke-linecap="round"/></svg>
+            <span>Tooling is consolidated, which can disrupt legacy contracts.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="none" stroke="#92112d" stroke-width="2"/><line x1="7" y1="12" x2="17" y2="12" stroke="#92112d" stroke-width="2.2" stroke-linecap="round"/></svg>
+            <span>Internal stakeholders need to be available, not just informed.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

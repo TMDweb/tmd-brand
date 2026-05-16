@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>TMD · RTL Closing</title>
+<link rel="stylesheet" href="../slides.css">
+<style>
+  body { background: #f0f2f9; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+
+  /* T-Closing — mandatory: centered logo + thanks line. Nothing else. */
+  .end {
+    padding: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 60px;
+    direction: rtl;
+  }
+  .end .logo { width: 520px; height: auto; display: block; }
+  .end .thanks {
+    font-size: 64px; font-weight: 700; color: #fff;
+    margin: 0; line-height: 1;
+  }
+</style>
+</head>
+<body>
+  <section data-screen-label="الختام" class="slide dark end">
+    <img class="logo" src="../assets/TMD-logo-white.svg" alt="The Marketing Department — A TTP Company">
+    <p class="thanks">شكرًا لكم</p>
+  </section>
+</body>
+</html>
