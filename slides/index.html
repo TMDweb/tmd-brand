@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TMD · Sample slide deck</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #0C0E1D; font-family: var(--tmd-font); }
+
+  /* ============ slide chrome ============ */
+  deck-stage > section {
+    width: 1280px;
+    height: 720px;
+    box-sizing: border-box;
+    padding: 48px 64px;
+    position: relative;
+    overflow: hidden;
+    font-family: var(--tmd-font);
+  }
+  .dark { background: #0C0E1D; color: #fff; }
+  .light { background: #ffffff; color: #0C0E1D; }
+
+  .page-num { position: absolute; top: 48px; right: 64px; font-size: 13px; font-weight: 500; }
+  .dark .page-num { color: #f0f2f9; }
+  .light .page-num { color: #2f3e75; }
+
+  .header { position: absolute; top: 48px; left: 64px; text-align: left; max-width: 760px; }
+  .header .crumb { font-size: 14px; font-weight: 500; margin-bottom: 8px; }
+  .dark .header .crumb { color: #fcbf2c; }
+  .light .header .crumb { color: #2f3e75; }
+  .header .title { font-size: 56px; font-weight: 700; line-height: 1.05; margin: 0; }
+  .header .subtitle { font-size: 18px; font-weight: 500; margin-top: 10px; }
+  .dark .header .subtitle { color: #fcbf2c; }
+  .light .header .subtitle { color: #2f3e75; }
+
+  .footnote { position: absolute; bottom: 28px; left: 64px; font-size: 11px; color: #2f3e75; }
+
+  /* ============ cover ============ */
+  .cover { display: flex; flex-direction: column; justify-content: flex-end; }
+  .cover .logo { position: absolute; top: 48px; left: 64px; height: 80px; }
+  .cover .kicker { font-size: 14px; color: #f0f2f9; font-weight: 500; margin-bottom: 24px; }
+  .cover .big { font-size: 120px; font-weight: 700; line-height: 0.95; max-width: 1000px; margin: 0; }
+  .cover .big em { font-style: normal; color: #fcbf2c; }
+  .cover .accent { width: 96px; height: 6px; background: #fcbf2c; margin-top: 36px; }
+  .cover .sub { font-size: 22px; color: #fcbf2c; font-weight: 500; margin-top: 24px; }
+
+  /* ============ section divider ============ */
+  .sd { display: flex; align-items: center; justify-content: flex-start; }
+  .sd .bignum { position: absolute; left: -30px; top: 50%; transform: translateY(-50%); font-size: 700px; font-weight: 700; line-height: 0.8; color: #141B36; user-select: none; }
+  .sd .content { position: relative; z-index: 2; text-align: left; }
+  .sd .kicker { font-size: 22px; font-weight: 500; color: #fff; margin-bottom: 32px; }
+  .sd .name { font-size: 140px; font-weight: 700; line-height: 0.95; color: #fff; margin: 0; }
+
+  /* ============ agenda ============ */
+  .ag .items { position: absolute; top: 220px; right: 64px; left: 64px; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
+  .ag .item { display: flex; align-items: center; gap: 20px; flex-direction: row-reverse; }
+  .ag .label { font-size: 36px; font-weight: 700; }
+  .ag .box { width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 22px; }
+  .ag .item.overview .box { border: 2px dashed #fcbf2c; color: #fcbf2c; background: transparent; }
+  .ag .item.overview .label { color: #fcbf2c; }
+  .ag .item.active .box { background: #fcbf2c; color: #0C0E1D; border: 0; }
+  .ag .item.active .label { color: #fff; }
+
+  /* ============ content light ============ */
+  .ct .body { position: absolute; top: 230px; left: 64px; right: 64px; bottom: 80px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+  .ct .col { padding-top: 22px; border-top: 6px solid #29366C; }
+  .ct .col.accent { border-top-color: #fcbf2c; }
+  .ct .col h3 { font-size: 28px; font-weight: 700; margin: 0 0 14px; color: #0C0E1D; }
+  .ct .col p { font-size: 17px; line-height: 1.55; color: #0C0E1D; margin: 0; max-width: 320px; }
+  .ct .col .num { font-size: 13px; font-weight: 600; color: #2f3e75; margin-bottom: 12px; }
+
+  /* ============ content dark ============ */
+  .cd .body { position: absolute; top: 260px; left: 64px; right: 64px; bottom: 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: flex-start; }
+  .cd .lede { font-size: 26px; line-height: 1.4; font-weight: 500; color: #fff; max-width: 520px; margin: 0; }
+  .cd .lede em { font-style: normal; color: #fcbf2c; }
+  .cd .points { display: flex; flex-direction: column; gap: 18px; }
+  .cd .pt { padding-left: 16px; border-left: 2px solid #2f3e75; }
+  .cd .pt h4 { margin: 0 0 4px; font-size: 18px; font-weight: 700; color: #fff; }
+  .cd .pt p { margin: 0; font-size: 14px; line-height: 1.5; color: #f0f2f9; }
+
+  /* ============ stats ============ */
+  .st .body { position: absolute; top: 260px; left: 64px; right: 64px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px; }
+  .st .sc { display: flex; gap: 18px; }
+  .st .sc .bar { display: none; }
+  .st .sc .lbl { display: none; }
+  .st .sc .unit { font-size: 14px; color: #fcbf2c; margin-top: 12px; max-width: 220px; line-height: 1.4; text-transform: uppercase; font-weight: 700; }
+  .st .sc .num { font-size: 112px; font-weight: 700; line-height: 0.9; color: #fff; }
+  .st .sc .num small { font-size: 0.45em; font-weight: 600; margin-left: 2px; vertical-align: top; color: #fcbf2c; }
+  .st .sc .num .sym { color: #fcbf2c; }
+  .st .sc .unit { font-size: 14px; color: #fcbf2c; margin-top: 12px; max-width: 220px; line-height: 1.4; text-transform: uppercase; font-weight: 700; }
+
+  /* ============ comparison ============ */
+  .cmp .body { position: absolute; top: 230px; left: 64px; right: 64px; bottom: 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .cmp .cc { background: #f0f2f9; border: 1px solid #f0f2f9; padding: 32px; display: flex; flex-direction: column; gap: 16px; }
+  .cmp .cc.us { background: #fff; border: 2px solid #29366C; }
+  .cmp .cc .tag { font-size: 12px; font-weight: 600; color: #2f3e75; }
+  .cmp .cc.us .tag { color: #29366C; }
+  .cmp .cc h3 { margin: 0; font-size: 38px; font-weight: 700; color: #0C0E1D; }
+  .cmp .cc ul { list-style: none; padding: 0; margin: 8px 0 0; display: flex; flex-direction: column; gap: 10px; }
+  .cmp .cc li { font-size: 16px; color: #0C0E1D; padding-left: 18px; position: relative; line-height: 1.45; }
+  .cmp .cc li:before { content: ""; position: absolute; left: 0; top: 9px; width: 10px; height: 2px; background: #2f3e75; }
+  .cmp .cc.us li:before { background: #fcbf2c; }
+
+  /* ============ RTL cover ============ */
+  .rtl { direction: rtl; }
+  .rtl .cover .logo { right: 64px; left: auto; }
+</style>
+</head>
+<body>
+<deck-stage>
+
+  <!-- 01 · Cover -->
+  <section data-screen-label="01 Cover" class="dark cover">
+    <img class="logo" src="../assets/TMD-logo-white.svg" alt="TMD">
+    <div class="kicker">PARTNERSHIP DECK · 2026</div>
+    <h1 class="big">Build. Operate. <em>Transfer.</em></h1>
+    <div class="accent"></div>
+    <div class="sub">We're in the same boat.</div>
+  </section>
+
+  <!-- 02 · Section divider -->
+  <section data-screen-label="02 Section · Operate" class="dark sd">
+    <div class="bignum">02</div>
+    <div class="content">
+      <div class="kicker">SECTION 02</div>
+      <h2 class="name">Operate</h2>
+    </div>
+  </section>
+
+  <!-- 03 · Agenda -->
+  <section data-screen-label="03 Agenda" class="dark ag">
+    <div class="page-num">03</div>
+    <div class="header"><h1 class="title">Agenda</h1></div>
+    <div class="items">
+      <div class="item overview"><span class="label">Build</span><span class="box">01</span></div>
+      <div class="item active"><span class="label">Operate</span><span class="box">02</span></div>
+      <div class="item overview"><span class="label">Transfer</span><span class="box">03</span></div>
+      <div class="item overview"><span class="label">Working with us</span><span class="box">04</span></div>
+    </div>
+    <div class="footnote">Source: TMD partnership framework</div>
+  </section>
+
+  <!-- 04 · Content light -->
+  <section data-screen-label="04 Three phases" class="light ct">
+    <div class="page-num">04</div>
+    <div class="header">
+      <h1 class="title">How a Partnership Runs.</h1>
+      <div class="subtitle">CASE 2 · TITLE + SUBTITLE</div>
+    </div>
+    <div class="body">
+      <div class="col">
+        <div class="num">01 · BUILD</div>
+        <h3>Stand up the function.</h3>
+        <p>We design the org, the playbooks, and the stack, and place the team inside yours.</p>
+      </div>
+      <div class="col accent">
+        <div class="num">02 · OPERATE</div>
+        <h3>Run it weekly.</h3>
+        <p>Our team owns delivery against your KPIs. Your team owns the brief and the calendar.</p>
+      </div>
+      <div class="col">
+        <div class="num">03 · TRANSFER</div>
+        <h3>Hand it back, intact.</h3>
+        <p>Talent, tooling and SOPs migrate to your payroll. We exit on a fixed date you set.</p>
+      </div>
+    </div>
+    <div class="footnote">Average engagement · 12–15 months end-to-end</div>
+  </section>
+
+  <!-- 05 · Content dark -->
+  <section data-screen-label="05 Operate detail" class="dark cd">
+    <div class="page-num">05</div>
+    <div class="header">
+      <div class="crumb">PARTNERSHIP | PHASE 02</div>
+      <h1 class="title">What "Operate" Looks Like<br>on a Tuesday.</h1>
+    </div>
+    <div class="body">
+      <p class="lede">An <em>embedded TMD pod</em> sits inside your operations, with daily standups, weekly briefs, and one shared inbox between us.</p>
+      <div class="points">
+        <div class="pt"><h4>Shared OKRs</h4><p>Your numbers are our numbers. Reviewed monthly with your leadership.</p></div>
+        <div class="pt"><h4>Single source of truth</h4><p>One backlog, one dashboard, one calendar, accessible to both teams.</p></div>
+        <div class="pt"><h4>Quarterly transfer audit</h4><p>Each quarter, we measure how much of the function is ready to hand over.</p></div>
+      </div>
+    </div>
+    <div class="footnote">Operational model, v3 · 2026</div>
+  </section>
+
+  <!-- 06 · Stats -->
+  <section data-screen-label="06 Stats" class="dark st">
+    <div class="page-num">06</div>
+    <div class="header">
+      <h1 class="title">A Year of "Operate."</h1>
+      <div class="subtitle">2025 · 12 ACTIVE PARTNERSHIPS</div>
+    </div>
+    <div class="body">
+      <div class="sc gold">
+        <div class="bar"></div>
+        <div>
+          <div class="lbl">Publishing</div>
+          <div class="num">412<small>×</small></div>
+          <div class="unit">assets shipped, vs prior year</div>
+        </div>
+      </div>
+      <div class="sc teal">
+        <div class="bar"></div>
+        <div>
+          <div class="lbl">Views</div>
+          <div class="num">8.4<small>M</small></div>
+          <div class="unit">earned media reach, rolling 90 days</div>
+        </div>
+      </div>
+      <div class="sc pink">
+        <div class="bar"></div>
+        <div>
+          <div class="lbl">Engagement</div>
+          <div class="num"><span class="sym">+</span>38<small>%</small></div>
+          <div class="unit">QoQ lift across all active accounts</div>
+        </div>
+      </div>
+    </div>
+    <div class="footnote">Aggregated across 12 partnerships · TMD 2025 Annual</div>
+  </section>
+
+  <!-- 07 · Comparison -->
+  <section data-screen-label="07 Comparison" class="light cmp">
+    <div class="page-num">07</div>
+    <div class="header">
+      <h1 class="title">Agency vs. Department.</h1>
+      <div class="subtitle">WHY EMBEDDED WINS</div>
+    </div>
+    <div class="body">
+      <div class="cc">
+        <div class="tag">CONVENTIONAL AGENCY</div>
+        <h3>Hours, rendered.</h3>
+        <ul>
+          <li>Sold against a retainer</li>
+          <li>Outputs delivered from outside</li>
+          <li>KPIs are theirs, not yours</li>
+          <li>No clean exit path</li>
+        </ul>
+      </div>
+      <div class="cc us">
+        <div class="tag">TMD MODEL</div>
+        <h3>A department, embedded.</h3>
+        <ul>
+          <li>Sold against a transfer date</li>
+          <li>Embedded inside your team</li>
+          <li>KPIs are yours, owned jointly</li>
+          <li>Handover built into the contract</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footnote">Comparison framework · 2026 partnership briefing</div>
+  </section>
+
+  <!-- 08 · Arabic cover -->
+  <section data-screen-label="08 RTL cover" class="dark cover rtl">
+    <img class="logo" src="../assets/TMD-logo-white.svg" alt="TMD">
+    <div class="kicker">عرض الشراكة · 2026</div>
+    <h1 class="big">نَبني. نُشغّل.<br><em>نُسلّم.</em></h1>
+    <div class="accent"></div>
+    <div class="sub">نحن في القارب نفسه.</div>
+  </section>
+
+</deck-stage>
+<script src="deck-stage.js"></script>
+</body>
+</html>

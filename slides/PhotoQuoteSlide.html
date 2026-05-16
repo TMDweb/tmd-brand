@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TMD · Photo quote</title>
+<link rel="stylesheet" href="slides.css">
+<style>
+  body { background: #f0f2f9; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+
+  /* PHOTO QUOTE
+     Photo on one half, large pull-quote on the other half over
+     a colored panel. Use for testimonials or stakeholder quotes. */
+  .pq.slide { background: #0C0E1D; }
+  .pq .image {
+    position: absolute; left: 0; top: 0; bottom: 0; width: 42%;
+    overflow: hidden;
+  }
+  .pq .image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pq .panel {
+    position: absolute; right: 0; top: 0; bottom: 0; left: 48%;
+    padding: 100px 72px 100px 0;
+    display: flex; flex-direction: column; justify-content: center; gap: 24px;
+    color: #fff;
+  }
+  .pq .panel .marks { font-size: 96px; font-weight: 700; color: #fcbf2c; line-height: 0.6; }
+  .pq .panel blockquote {
+    margin: 0; font-size: 32px; line-height: 1.4; font-weight: 500; color: #fff;
+  }
+  .pq .panel .who {
+    display: flex; flex-direction: column; gap: 2px; margin-top: 16px;
+    padding-top: 16px; border-top: 2px solid rgba(252,191,44,0.4);
+  }
+  .pq .panel .who .name { font-size: 18px; font-weight: 700; color: #fff; }
+  .pq .panel .who .role { font-size: 14px; color: #f0f2f9; }
+
+  .pq .page-num { color: #f0f2f9; }
+</style>
+</head>
+<body>
+  <section data-screen-label="19 Photo quote" class="slide dark pq">
+    <div class="image"><img src="../assets/photos/agreement.jpg" alt=""></div>
+    <div class="page-num">19</div>
+    <div class="panel">
+      <div class="marks">"</div>
+      <blockquote>The work that gets remembered is the work a brand could not have done alone, and could not have been done by anyone else.</blockquote>
+      <div class="who">
+        <span class="name">A note on partnership</span>
+        <span class="role">From the TMD field manual</span>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

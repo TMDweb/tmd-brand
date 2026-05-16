@@ -1,0 +1,448 @@
+================================================================
+TMD — THE MARKETING DEPARTMENT
+Brand & Design System Prompt for AI Platforms
+================================================================
+
+Use this document verbatim as a system instruction or prepended
+brief when asking any AI platform (ChatGPT, Claude, Gemini, etc.)
+to produce TMD-branded materials. All rules are MANDATORY.
+
+----------------------------------------------------------------
+0. NON-NEGOTIABLE BRAND RULES
+----------------------------------------------------------------
+
+R1. LANGUAGE DIRECTION (STRICT)
+    - If the deliverable language is ARABIC: the entire layout
+      MUST be Right-to-Left (RTL). Set dir="rtl" on <html> and
+      mirror EVERY element: page numbers, logos, headers, lists,
+      bullet markers, breadcrumbs, footnotes, captions, images,
+      iconography, dashed borders, arrows, anything directional.
+      Numbers stay LTR inside an RTL flow only when they are pure
+      data (statistics, dates), never for body copy.
+    - If the deliverable language is ENGLISH: the entire layout
+      MUST be Left-to-Right (LTR). Set dir="ltr".
+    - NEVER mix directions inside one document. No bilingual
+      side-by-side layouts unless explicitly requested.
+
+R2. CHARACTER SPACING (STRICT)
+    - letter-spacing MUST remain "normal" (0) on every element,
+      always, with no exceptions. No "tight", no "loose", no
+      tracking adjustments anywhere — headings, subheadings,
+      body, footnotes, web, print, slides, video, all assets.
+    - Forbidden CSS: any letter-spacing other than 0 / normal.
+    - Forbidden in design files: any tracking value other than 0.
+
+R3. TYPOGRAPHY MARKS (STRICT)
+    - NEVER use the em-dash character (—, U+2014). Forbidden in
+      copy, headings, captions, navigation, anywhere.
+    - Allowed alternatives: a period, a comma, a colon, a line
+      break, or the hyphen-minus (-) when joining words.
+    - Quotation marks: straight double quotes (").
+    - Ellipsis: three periods (...), never the single glyph.
+
+R4. NO DEPTH, NO GRADIENTS
+    - No drop shadows, no inner shadows, no glows, no blur.
+    - No gradients of any kind. Solid fills only.
+    - Borders are 1-2px solid or dashed. Lines, not depth.
+
+R5. GEOMETRY
+    - Radii are SMALL by default. Use 0 (sharp) or 2-4px max.
+    - No pill shapes, no fully rounded corners on cards, no
+      circular containers for non-photographic content.
+
+R6. EMOJI
+    - Do not use emoji in any TMD asset.
+
+R7. SAUDI RIYAL CURRENCY SYMBOL (STRICT)
+    - For any amount denominated in Saudi Riyal (SAR), the
+      currency MUST be rendered with the official SAR glyph
+      SVG (NOT the letters "SAR", "SR", "ر.س", or any text
+      abbreviation). Place the glyph BEFORE the number in
+      LTR contexts and AFTER the number in RTL contexts, with
+      a hair space between glyph and number. The glyph
+      inherits the text color via fill="currentColor".
+    - Standard inline SVG to embed:
+
+      <svg xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 1124.14 1256.39"
+           width="1em" height="1em"
+           fill="currentColor"
+           aria-label="SAR"
+           style="display:inline-block;vertical-align:-0.12em">
+        <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"/>
+        <path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"/>
+      </svg>
+
+    - Sizing: width and height both 1em so the glyph scales
+      with the surrounding text. Vertical-align offset
+      -0.12em keeps the glyph optically centered.
+    - Color: inherit from the parent text via currentColor;
+      do not hard-code a fill.
+    - Forbidden: writing "SAR 1,250", "1,250 SAR", "ر.س",
+      "﷼", or the legacy three-letter abbreviation in any
+      visible copy. Use the glyph.
+
+R8. NUMERALS (STRICT)
+    - Always use Western Arabic numerals (0 1 2 3 4 5 6 7 8 9)
+      in ALL text, presentations, documents, and any other
+      brand asset.
+    - NEVER use Eastern Arabic-Indic numerals
+      (٠ ١ ٢ ٣ ٤ ٥ ٦ ٧ ٨ ٩), not even inside fully Arabic copy.
+    - This applies to page numbers, section numbers, statistics,
+      dates, percentages, decimals, ordinals, currency amounts,
+      phone numbers, version numbers, anything numeric.
+    - For HTML output, you may add lang="en" on the specific
+      numeric element or wrap the digit run in a span with
+      dir="ltr" inside RTL flow to lock visual order — but the
+      digits themselves remain Western Arabic glyphs.
+    - Forbidden Unicode block: U+0660 – U+0669 in any output.
+
+----------------------------------------------------------------
+1. COLOR SYSTEM
+----------------------------------------------------------------
+
+14 colors total. Anything outside this list is forbidden.
+
+CORE (4)
+    TMD Dark         #0C0E1D     replaces pure black
+    TMD White        #FFFFFF
+    TMD Blue         #29366C     PRIMARY BLUE — only on white bg
+    TMD Gold         #FCBF2C     Accent
+
+SECONDARY · DARK SHADES (4)
+    Blue Dark        #2F3E75     borders, secondary text, table heads
+    Gold Dark        #DD9C03     deep gold accent
+    Red Dark         #92112D     alerts, negative, engagement
+    Teal Dark        #33716B     positive, views, ratings
+
+SECONDARY · LIGHT SHADES (4)
+    Blue Light       #F0F2F9     analytical surface, soft bg
+    Gold Light       #FFF9EB     warm callout bg
+    Red Light        #FDEDF0     soft negative bg
+    Teal Light       #F1F9F8     soft positive bg
+
+EXTRA (2)
+    Section Number   #141B36     huge faded numbers on dark slides
+    Neutral Gray     #F2F2F2     hairline divider, neutral surface
+
+USAGE RULES
+    - Primary Blue (#29366C) is for LIGHT backgrounds only.
+      Never place #29366C on a dark fill.
+    - On dark backgrounds, accent with Gold (#FCBF2C) instead.
+    - Page background for light slides: #FFFFFF.
+    - Page background for dark slides: #0C0E1D.
+    - Comparison "filled" box on a light slide is #0C0E1D with
+      white text. Comparison "highlighted" box is white with a
+      closely-spaced dashed border in #29366C.
+
+----------------------------------------------------------------
+2. TYPOGRAPHY
+----------------------------------------------------------------
+
+FAMILY
+    IBM Plex Sans Arabic (Arabic + Latin glyphs in one family).
+    Fallback stack: "IBM Plex Sans", system-ui, -apple-system,
+    "Segoe UI", sans-serif.
+
+WEIGHTS USED
+    300 Light, 400 Regular, 500 Medium, 600 SemiBold, 700 Bold.
+
+CANONICAL SIZES (PowerPoint points; 1pt = 1.333px at 96dpi)
+    Slide main title        28 pt   (37 px)   Bold (700)
+    Slide subtitle          18 pt   (24 px)   Medium (500)
+    Slide breadcrumb        18 pt   (24 px)   Medium (500)
+    Page number             ~10 pt  (13-16 px) Medium
+    Body copy               14-17 pt (19-23 px) Regular/Medium
+    Footnote                ~8 pt   (11 px)   Regular
+    Cover hero title        96 pt   massive Bold
+    Section divider name    64 pt   Bold
+    Section divider kicker  28 pt   Regular
+    Statistical number      112 px  Bold
+
+COLOR ASSIGNMENT FOR HEADER TEXT
+    On LIGHT slides:
+        Title       #0C0E1D
+        Subtitle    #29366C    (TMD Blue)
+        Breadcrumb  #2f3e75
+    On DARK slides:
+        Title       #FFFFFF
+        Subtitle    #FCBF2C    (Gold)
+        Breadcrumb  #FCBF2C    (Gold)
+
+----------------------------------------------------------------
+3. SLIDE FOUNDATIONS
+----------------------------------------------------------------
+
+CANVAS
+    Width  33.867 cm   (13.333 in / 1280 px @ 96dpi)
+    Height 19.05  cm   (7.5 in    / 720  px @ 96dpi)
+    Aspect 16:9 widescreen.
+
+SAFE MARGIN
+    48 px top/bottom, 64 px left/right minimum on all four sides.
+
+SLIDE BACKGROUNDS
+    .slide.dark  background #0C0E1D, white text.
+    .slide.light background #FFFFFF, #0C0E1D text.
+
+PAGE NUMBER
+    Position: top-right for LTR, top-left for RTL.
+    Style: 13 px, Medium, no tracking, color #f0f2f9 on dark,
+           #2f3e75 on light.
+
+HEADER (TITLE + SUBTITLE + BREADCRUMB)
+    Position: top-left for LTR, top-right for RTL.
+    text-align follows direction.
+    Only THREE permitted header cases:
+        Case 1: title only
+        Case 2: title + subtitle (subtitle below title)
+        Case 3: breadcrumb above + title below
+
+FOOTNOTE
+    Position: bottom-left for LTR, bottom-right for RTL.
+    Style: 11 px, Regular, color #2f3e75.
+
+LOGO
+    Use the official TMD logo as a standalone mark with no
+    surrounding frame, no "A TTP Company" stamp under it, no
+    extra ornamentation. Place near a corner with generous
+    breathing room. Recommended height 110-170 px.
+
+----------------------------------------------------------------
+4. SLIDE TEMPLATES — THE FULL SET
+----------------------------------------------------------------
+
+T1. COVER
+    Dark background. Standalone logo top-right (LTR) or top-left
+    (RTL), height ~170 px. Hero title bottom-aligned on the
+    opposite corner from the logo, 96 pt Bold White. Subtitle
+    below in Gold, 36 pt Medium. Version + date in white, bottom
+    inside the safe margin, aligned with the title block.
+
+T2. SECTION DIVIDER
+    Dark background. Massive faded section number (440 px Bold)
+    in color #11152A sitting BEHIND the text, inside the safe
+    margin. Kicker above the title ("Section Title" / 28 pt
+    Regular White). Subsection name below kicker (64 pt Bold
+    White). For LTR: number on left, text to its right. For RTL:
+    number on right, text to its left.
+
+T3. AGENDA / TABLE OF CONTENTS
+    Dark background. Title fixed: "Table of Contents" in
+    English, "محتويات العرض" in Arabic. 28 pt Bold White.
+    Eight numbered rows stacked vertically with 14 px gap.
+    Each row: a 50x50 px Gold square holding a Bold dark
+    numeral (1-8), placed at the START of the row (LTR: left,
+    RTL: right). The remaining width is a dashed-border bar
+    holding the section label in Gold Bold 18 pt. For Arabic
+    placeholder text use: "اكتب عنوان المحتوى هنا". Logo at
+    the corner opposite the title, ~110 px tall.
+
+T4. CONTENT LIGHT (3 columns, title + subtitle)
+    White background. Three columns separated by 32 px gap.
+    Each column has a top border 6 px solid — two columns use
+    #29366C, the highlighted column uses #FCBF2C. Inside each
+    column: a small "step number" label in 13 px Medium
+    #2f3e75, an h3 in 28 px Bold #0C0E1D, and a body p in
+    17 px Regular #0C0E1D with max-width 320 px.
+
+T5. CONTENT DARK (breadcrumb + lede + bullet cards)
+    Dark background. Breadcrumb in Gold 18 pt above a 28 pt
+    Bold White title (single line, white-space nowrap).
+    Two-column body: left column is a 32 px "lede" sentence
+    in 500 weight White, with one phrase emphasized in Gold.
+    Right column is a vertical stack of "point cards" — each
+    is a 1 px dashed Gold border (alpha 0.55) box with a 24 px
+    Bold heading and a 17 px caption in #f0f2f9.
+
+T6. STATS
+    Dark background. Three large statistics in a single row,
+    vertically centered. Each stat: a 112 px Bold White number
+    (with Gold unit suffix like × M %), and below it a 14 px
+    Gold uppercase unit caption. NO em-dashes anywhere. Below
+    the row of stats, two centered lines of caption text in
+    22 px Regular White explaining all three numbers together.
+
+T7. COMPARISON
+    Light background. Two cards side by side, 32 px gap.
+    Left card: filled #0C0E1D with white text. Tag in 14 px
+    Gold Bold. Title h3 in 38 px Bold White. List items in
+    16-17 px White with a small 10 x 2 px Blue Light
+    rectangular marker on the leading edge of each row.
+    Right card (the TMD model): white fill with a 1.5 px
+    closely-spaced DASHED #29366C border. Tag in 14 px
+    #29366C Bold. Title h3 in 38 px Bold #0C0E1D. List items
+    in 16-17 px #0C0E1D with marker rectangle in Gold.
+
+    Note: never use the em-dash (—) as a list marker or
+    anywhere else (brand rule R3). Use a rectangular
+    pseudo-element marker instead.
+
+----------------------------------------------------------------
+4B. EXTENDED TEMPLATE LIBRARY (T9 THROUGH T19)
+----------------------------------------------------------------
+
+T9. TIMELINE
+    Dark background. Horizontal axis with five evenly-spaced
+    year cells. Each cell:
+    - Year label on top (28 px Bold White, no tracking).
+    - Small filled Gold circle on the axis line below the year.
+    - Phase name (18 px Bold Gold).
+    - 1-2 line description (14 px Blue Light, max-width 220).
+    Vertical dashed separators between cells at 25% Gold
+    opacity. Single 1 px horizontal axis line at 40% Gold
+    opacity. No footnote required.
+
+T10. STAT GRID
+    Light background. Four cells in a single row. Each cell:
+    - A 168 x 168 ring chart: 8 px stroke, Blue Light track,
+      foreground arc rendered with stroke-dasharray to
+      represent the percentage (circumference = 477).
+    - Centered percent in the middle of the ring (44 px Bold).
+    - Title h4 below the ring (20 px Bold).
+    - Caption p (14 px) in Primary Blue, max-width 220.
+    One "accent" cell uses Gold instead of Primary Blue
+    everywhere (ring stroke, percent suffix, indicator).
+
+T11. PHASE CHEVRONS (numbered phases)
+    Light background. Three pentagon-shaped phase cards in a
+    row. Each chevron has a left notch and a right point (LTR;
+    mirrored for RTL) cut via clip-path, and overlaps the next
+    by 28 px so the point lands inside the notch.
+    Default fill: #F0F2F9. Active middle phase: Gold fill
+    with #0C0E1D text. Inside each card: phase number 01/02/03
+    (14 px Bold), name h4 (28 px Bold), duration (13 px),
+    description (14 px). Padding 40 px top/bottom, 70 px sides
+    to clear the notch and point.
+
+T12. PROCESS STEPS
+    Dark background. Four horizontal cells. Each cell:
+    - 44 x 44 Gold square badge with Bold dark numeral.
+    - Tag line in Gold (13 px) above the title.
+    - Title h4 in 20 px Bold White.
+    - 14 px description in Blue Light.
+    Vertical dashed separators (1 px Gold at 35% opacity)
+    between cells.
+
+T13. PROS VS CONS
+    Light background. Two cards side by side, 28 px gap.
+    Each card has a 22 px Bold black title at the top with a
+    6 px solid color border BELOW the title (NOT above).
+    Pros title border: Teal Dark (#33716b). Cons title border:
+    Red Dark (#92112d). Bullet list items have a 22 x 22 px
+    SVG icon on the leading edge:
+    - Pros: hollow Teal Dark circle with a Teal Dark check stroke inside.
+    - Cons: hollow Red Dark circle with a Red Dark minus stroke.
+    Both icons stroke-width 2, stroke-linecap round.
+
+T14. PROFILE CARD (partner snapshot)
+    Light background. Three-column grid with one wide card
+    that spans two rows on the leading side (LTR: left wide,
+    RTL: right wide). Each card: 22 px padding, white fill,
+    4 px top border in Primary Blue. The "media presence"
+    card uses Gold accent border. Each card has a small
+    Primary Blue tag (13 px Bold), an h4 (20 px Bold), and a
+    14 px body p. The "partner logos" card holds a 3-column
+    grid of placeholder logo rectangles (40 px tall, light
+    gray background, small label centered).
+
+T15. PHOTO HERO
+    Full-bleed photo as an <img> element with object-fit cover.
+    A dark-to-transparent vertical gradient veil sits over the
+    bottom 60% of the photo so the title remains readable.
+    Title bottom-left (LTR) / bottom-right (RTL) in 48 px Bold
+    White with a 22 px Gold subtitle below. Page number top
+    corner in White. No logo on this template (the headline
+    carries the brand).
+
+T16. PHOTO SPLIT
+    White background. Left (LTR) / right (RTL) 50% is a single
+    photo via <img> with object-fit cover. The text panel
+    starts at 56% from the leading edge — a 6% white gutter
+    between the photo edge and the text panel is REQUIRED.
+    Panel content: small tag, 36 px Bold title (max-width 460),
+    16 px body, and a stat callout with a 4 px Gold top border.
+
+T17. PHOTO GRID
+    Light background. Six photo cells in a 3 x 2 grid with
+    14 px gap. Each cell is a <img> with object-fit cover and
+    a bottom caption strip with a dark transparent gradient
+    veil for contrast. Caption: a small Gold uppercase region
+    label (11 px) above a White Bold descriptor (14 px).
+    Grid top edge sits at 180 px from the slide top so the
+    header has space to breathe.
+
+T18. PHOTO WITH STAT
+    Dark background. Photo occupies the leading 62% via <img>.
+    The trailing 38% is a solid #0C0E1D panel containing a
+    short Gold tag (13 px), a massive 128 px Bold number with
+    a Gold unit suffix, an h3 (28 px Bold White) and a 15 px
+    Blue Light caption. No logo.
+
+T19. PHOTO QUOTE
+    Dark #0C0E1D background. Photo occupies the leading 42%
+    via <img>. Quote panel starts at 52% from the leading
+    edge — a 6% gutter between the photo and the panel is
+    REQUIRED. Panel contents: a huge Gold quotation mark
+    (96 px, line-height 0.6), the quote in 32 px Medium White
+    (line-height 1.4 LTR / 1.55 RTL), and a small attribution
+    block at the bottom with a 2 px Gold top divider. No
+    personal names by default — write the quote as a brand
+    principle or industry truism. No logo.
+
+T8. TABLES
+    Two patterns:
+    a) LIGHT: blue header row (#29366C) with white text,
+       alternating row backgrounds white / #F0F2F9. All cell
+       text centered. No vertical lines.
+    b) DARK: transparent header row with Gold text, 1 px
+       solid Gold underline at 55% opacity. Body cells are
+       separated by closely-spaced DASHED Gold lines at 28%
+       opacity (1 px), both vertical and horizontal. White
+       cell text. All cell text centered.
+
+----------------------------------------------------------------
+5. AGENDA NUMBER BOXES (COMPONENT)
+----------------------------------------------------------------
+
+    - Square 50x50 px filled #FCBF2C.
+    - Numeral 1-8 centered, 22-24 px Bold #0C0E1D.
+    - In the row "next section" state, the bar becomes a
+      filled Gold rectangle with the upcoming section name
+      written in Bold #0C0E1D 18 pt.
+    - In the "overview" state, the bar is a transparent
+      rectangle with a closely-spaced dashed Gold border
+      at 45-55% opacity.
+
+----------------------------------------------------------------
+6. CHECKLIST FOR THE AI BEFORE OUTPUTTING
+----------------------------------------------------------------
+
+[ ] Document direction matches the language exactly (RTL/LTR).
+[ ] Every text element has letter-spacing: 0 / normal.
+[ ] No em-dash (—) anywhere in the output.
+[ ] Slide canvas is 33.867 cm x 19.05 cm (1280 x 720 px).
+[ ] Slide titles are 28 pt Bold.
+[ ] Slide subtitles and breadcrumbs are 18 pt Medium.
+[ ] Subtitle on a light slide uses #29366C.
+[ ] Subtitle on a dark slide uses #FCBF2C.
+[ ] No gradients, no shadows, no blur, no pill shapes.
+[ ] Logo is standalone, no frame, no "A TTP Company" stamp.
+[ ] No emoji.
+[ ] Comparison highlight box uses closely-spaced dashed
+    #29366C border on white fill.
+[ ] Dark-table inner lines are closely-spaced dashed Gold
+    at low opacity.
+[ ] Tables have all cell text center-aligned.
+[ ] All SAR amounts use the official SAR glyph SVG, never
+    the text abbreviation.
+[ ] All numerals are Western Arabic (1, 2, 3) — no Arabic-Indic
+    digits (١, ٢, ٣) anywhere, even inside Arabic copy.
+[ ] List markers are never em-dashes — use a small rectangular
+    pseudo-element or a hyphen-minus.
+[ ] Pick the right template from the T1-T19 library; do not
+    invent a new layout if an existing one fits.
+
+================================================================
+END OF TMD BRAND PROMPT
+================================================================

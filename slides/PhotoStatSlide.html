@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TMD · Photo with stat</title>
+<link rel="stylesheet" href="slides.css">
+<style>
+  body { background: #f0f2f9; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+
+  /* PHOTO + STAT CALLOUT
+     Full-bleed image on the left two-thirds. A solid dark
+     panel covers the right third with a single statistic. */
+  .pws .photo { position: absolute; left: 0; top: 0; bottom: 0; right: 38%; object-fit: cover; width: auto; height: 100%; display: block; }
+  .pws .panel {
+    position: absolute; right: 0; top: 0; bottom: 0; width: 38%;
+    background: #0C0E1D;
+    padding: 80px 56px;
+    display: flex; flex-direction: column; justify-content: center; gap: 18px;
+    color: #fff;
+  }
+  .pws .panel .tag { font-size: 13px; font-weight: 700; color: #fcbf2c; }
+  .pws .panel .n {
+    font-size: 128px; font-weight: 700; line-height: 0.9; color: #fff;
+  }
+  .pws .panel .n small { font-size: 0.4em; color: #fcbf2c; font-weight: 600; }
+  .pws .panel h3 { margin: 0; font-size: 28px; font-weight: 700; color: #fff; }
+  .pws .panel p { margin: 0; font-size: 15px; line-height: 1.6; color: #f0f2f9; max-width: 320px; }
+
+  .pws .page-num { color: #fff; }
+</style>
+</head>
+<body>
+  <section data-screen-label="18 Photo with stat" class="slide dark pws">
+    <img class="photo" src="../assets/photos/flag-man.jpg" alt="">
+    <div class="page-num">18</div>
+    <div class="panel">
+      <span class="tag">NATIONAL DAY 2025</span>
+      <div class="n">8.4<small>M</small></div>
+      <h3>People reached in 14 days</h3>
+      <p>One brief, one creative, every region. Earned plus paid plus owned, deduplicated reach across the campaign window.</p>
+    </div>
+  </section>
+</body>
+</html>

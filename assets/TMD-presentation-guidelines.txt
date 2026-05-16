@@ -1,0 +1,154 @@
+[ 1. Official Typography ]
+  → Font: IBM Plex Sans Arabic
+    ⛔ Strictly mandatory
+    ⛔ No font substitutions are allowed under any circumstances
+
+[ 2. Exclusive Color Palette ]
+  → Core Colors
+    • #0C0E1D ← Official Dark (Pure Black Alternative)
+    • #fcbf2c ← Accent Gold
+    • #29366C ← Primary Blue
+    • #ffffff ← White
+  → Data Visualization Only
+    • #92112d ← Pink
+    • #33716b ← Teal
+  → Secondary / Grays
+    • #f0f2f9 ← Blue Light
+    • #2f3e75 ← Blue Dark
+    • #2f3e75 ← Blue Dark
+    • #f0f2f9 ← Blue Light
+    • #fff9eb ← Gold Light
+    • #fff9eb ← Gold Light
+    • #fcbf2c ← Gold
+    • #f1f9f8 ← Light Teal
+    • #fdedf0 ← Red Light
+
+  → Strict Color Rules
+    ⛔ Gradients are strictly forbidden (Use Solid colors only)
+    ⛔ Do not use #000000, #11172c, or #1a1a1a (Always use #0C0E1D)
+    ⛔ Any color outside the list above is strictly forbidden
+    ✅ Primary Blue (#29366C) must ONLY be used on White (#ffffff) backgrounds
+    ⛔ Never use Primary Blue (#29366C) on a Dark (#0C0E1D) background
+
+[ 3. Light / Dark Mode Distribution ]
+  → Dark Mode Slides
+    • Background: #0C0E1D
+    • Text: #ffffff or #f0f2f9
+    • Accents: #fcbf2c
+    • Data: #33716b or #92112d
+  → Light Mode Slides
+    • Background: #ffffff
+    • Text: #0C0E1D
+    • Primary Elements: #29366c
+    • Accents: #fcbf2c
+    • Data: #92112d or #33716b
+
+[ 4. Header Architecture (Mandatory Layouts) ]
+  → Page Number (Global)
+    • Placement: Top Left
+    • Size: Small
+    • Color: #f0f2f9 (Dark Mode) / #2f3e75 (Light Mode)
+
+  → Case 1: Main Title Only
+    • Main Title: Top Right / Large, Bold / #ffffff (Dark Mode) or #0C0E1D (Light Mode)
+    ⛔ No additional text (No Breadcrumbs, No Subtitles)
+    ⛔ No horizontal divider lines under the title
+
+  → Case 2: Main Title + Subtitle
+    • Main Title: Top Right / Large, Bold / #ffffff (Dark Mode) or #0C0E1D (Light Mode)
+    • Subtitle: Directly below Main Title / Small / #fcbf2c (Dark Mode) or #2f3e75 (Light Mode)
+    ⛔ No horizontal divider lines between or under the titles
+
+  → Case 3: Breadcrumb + Main Title
+    • Breadcrumb: Above Main Title (Top Right) / Small / #fcbf2c (Dark) or #2f3e75 (Light)
+    • Format: [Section Name]  [Subcategory Name]
+      ✅ Permitted Separators: Direct text spacing or a vertical pipe |
+      ⛔ Prohibited Separators: Do not use arrows like ←
+    • Main Title: Directly below Breadcrumb / Large, Bold / #ffffff (Dark) or #0C0E1D (Light)
+    ⛔ No horizontal divider lines under the title
+
+  → Footnote (If applicable)
+    • Placement: Bottom Right
+    • Size: Extra Small
+    • Color: #2f3e75
+
+[ 5. Slide Master Layouts ]
+  → Cover Slide (Dark)
+    • Background: #0C0E1D
+    • Main Title: #ffffff Bold (Large)
+    • Subtitle: #fcbf2c
+    • Element: 6px horizontal Accent Gold line
+
+  → Section Divider (Dark)
+    • Background: #0C0E1D
+    • Section Number: Massive size / Behind text on the right / Color #141B36
+    • Foreground Text: Section Title (Top) Small #ffffff / Subsection Name (Bottom) Extra Large Bold #ffffff
+    • Alignment: Right-aligned
+
+  → Content Slides
+    • Dark: Background #0C0E1D / Apply Header Rules
+    • Light: Background #ffffff / Apply Header Rules
+
+  → Agenda / Table of Contents (Dark)
+    • Background: #0C0E1D
+    • Title: Top Right / #ffffff / Bold
+    • Number Boxes: Fill #FCBF2C / Text #0C0E1D
+    • Overview State: Title rectangles transparent / Dotted borders #FCBF2C / Text #FCBF2C
+    • Active Section State: Selected rectangle solid fill #FCBF2C / Text #0C0E1D / Border removed
+
+[ 6. Internal Slide Design Elements ]
+  → Stat Cards
+    ⛔ Solid backgrounds on cards
+    ✅ Numbers must float directly on the slide background
+    ✅ Separator: Thin vertical colored line on the side of each card
+      • #92112d for Engagement and negative sentiment
+      • #33716b for Views and ratings
+      • #fcbf2c for Publishing, reach, and key metrics
+      • If Light Mode: #29366C for Official titles and main pillars
+      • If Dark Mode: #0C0E1D for Official titles and main pillars
+
+  → Analytical Text Boxes
+    ⛔ Heavy or highly visible backgrounds
+    ✅ Extremely subtle background (one shade deeper than slide background)
+    ✅ Thin accent line on one side only (Color: #2f3e75 or #29366c)
+
+  → Tables
+    • Dark Mode
+      → Header: Transparent / Text: Bold Accent Gold #FCBF2C
+      → Content Rows: Transparent / Text: White
+      → Borders: Thick horizontal Gold line (#FCBF2C) under header / Thin vertical Gold lines / Thin horizontal Gold lines
+    • Light Mode
+      → Header: Solid Fill #29366c / Text: White
+      → Content Rows: Alternating colors (#ffffff and #f0f2f9) / Text: #0C0E1D
+
+  → Comparison Cards
+    • Dark Mode: Thin borders #2f3e75 / No background
+    • Light Mode: Thin borders #f0f2f9 / Background #f0f2f9
+
+  → Badges & Highlights
+    • Background: #fcbf2c / Text: #0C0E1D
+
+  → Arrows & Visual Dividers
+    • Colors: #29366c or #fcbf2c
+
+[ 7. Aesthetic & Layout Guidelines ]
+  → Statistical Typography
+    • Dark Mode: Massive Bold Number #ffffff + Small Unit #33716b
+    • Light Mode: Massive Bold Number #29366c + Small Unit #2f3e75
+
+  → Spacing & Layout
+    ✅ Generous whitespace between all sections
+    ✅ Minimalist approach (fewer elements = better design)
+    ✅ Do not clutter the slide. Leave room to breathe
+
+[ 8. Strict Content Rules & Dimensions ]
+  → General Rules
+    ✅ Text content is strictly provided. Do not alter a single letter
+    ✅ Entire presentation must be strictly RTL (Arabic)
+    ✅ Maintain 0.5-inch safe margins on all sides
+    ✅ No element should bleed outside the slide boundaries
+    ✅ Do not perform external web searches. Focus on aesthetic execution
+
+  → Slide Dimensions
+    • Width: 33.867 cm
+    • Height: 19.05 cm

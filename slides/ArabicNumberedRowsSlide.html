@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>TMD · RTL Phase chevrons</title>
+<link rel="stylesheet" href="slides.css">
+<style>
+  body { background: #f0f2f9; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+.pc-flow .body {
+    position: absolute; top: 230px; left: 64px; right: 64px; bottom: 80px;
+    display: flex; flex-direction: column; justify-content: center;
+    direction: rtl;
+  }
+
+  .phases { display: flex; align-items: stretch; gap: 0; height: 320px; }
+  .phase {
+    flex: 1;
+    /* RTL chevron: notch on right, point on left (mirror of LTR) */
+    clip-path: polygon(38px 0, 100% 0, calc(100% - 38px) 50%, 100% 100%, 38px 100%, 0 50%);
+    padding: 40px 70px 40px 70px;
+    background: #f0f2f9;
+    color: #0C0E1D;
+    display: flex; flex-direction: column; justify-content: center; gap: 10px;
+    text-align: right;
+  }
+  .phase + .phase { margin-right: -28px; }
+  .phase.active { background: #fcbf2c; color: #0C0E1D; }
+
+  .phase .n { font-size: 14px; font-weight: 700; color: #29366C; direction: ltr; text-align: right; }
+  .phase.active .n { color: #0C0E1D; }
+  .phase h4 { font-size: 28px; font-weight: 700; margin: 0; color: #0C0E1D; }
+  .phase .duration { font-size: 13px; font-weight: 600; color: #29366C; }
+  .phase.active .duration { color: #0C0E1D; }
+  .phase p { font-size: 14px; line-height: 1.75; margin: 6px 0 0; color: #29366C; max-width: 260px; }
+  .phase.active p { color: #0C0E1D; }
+</style>
+</head>
+<body>
+  <section data-screen-label="11 مسار المراحل" class="slide light pc-flow rtl">
+    <div class="page-num">11</div>
+    <div class="header">
+      <div class="title">من البناء إلى التسليم</div>
+      <div class="subtitle">ثلاث مراحل متداخلة على مسار واحد</div>
+    </div>
+
+    <div class="body">
+      <div class="phases">
+        <div class="phase">
+          <span class="n">01</span>
+          <h4>البناء</h4>
+          <span class="duration">الأشهر 0 إلى 3</span>
+          <p>نقيم الهيكل والإجراءات والأدوات. الفريق يجلس داخل فريقكم.</p>
+        </div>
+        <div class="phase active">
+          <span class="n">02</span>
+          <h4>التشغيل</h4>
+          <span class="duration">الأشهر 3 إلى 12</span>
+          <p>مؤشرات مشتركة، تقويم واحد، صندوق وارد واحد. ننفذ أسبوعيًا وتوجهون الموجز.</p>
+        </div>
+        <div class="phase">
+          <span class="n">03</span>
+          <h4>التسليم</h4>
+          <span class="duration">الأشهر 12 إلى 15</span>
+          <p>تنتقل الكفاءات والأدوات والإجراءات إلى فريقكم في موعد محدد.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

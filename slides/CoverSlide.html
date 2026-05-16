@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TMD · Cover slide</title>
+<link rel="stylesheet" href="slides.css">
+<style>
+  body { background: #f0f2f9; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+
+  .cover { padding: 0; position: relative; }
+
+  /* Logo — top-right, standalone */
+  .cover .logo {
+    position: absolute;
+    top: 56px;
+    right: 72px;
+    height: 170px;
+    width: auto;
+    display: block;
+  }
+
+  /* Title block — lower-left */
+  .cover .text-block {
+    position: absolute;
+    left: 80px;
+    bottom: 200px;
+    max-width: 1100px;
+  }
+  .cover .title {
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 1.05;
+    color: #ffffff;
+    margin: 0 0 18px 0;
+  }
+  .cover .subtitle {
+    font-size: 36px;
+    color: #fcbf2c;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  /* Version + date — bottom-left small text */
+  .cover .versioning {
+    position: absolute;
+    left: 80px;
+    bottom: 64px;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.5;
+    }
+  .cover .versioning .v { display: block; }
+  .cover .versioning .d { display: block; }
+</style>
+</head>
+<body>
+  <section data-screen-label="01 Cover" class="slide dark cover">
+    <img class="logo" src="../assets/TMD-logo-white.svg" alt="The Marketing Department">
+
+    <div class="text-block">
+      <h1 class="title">Enter Main Title Here</h1>
+      <p class="subtitle">Secondary Subtitle Goes Here</p>
+    </div>
+
+    <div class="versioning">
+      <span class="v">V_01</span>
+      <span class="d">Day, Month DD, YYYY</span>
+    </div>
+  </section>
+</body>
+</html>

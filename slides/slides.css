@@ -1,0 +1,78 @@
+/* TMD slide foundation — 1280x720 base
+   Default is LTR (English). For Arabic, add class="rtl" to the slide
+   element, which mirrors the page number, header, and footnote. */
+@import url("../colors_and_type.css");
+
+html, body { margin: 0; padding: 0; }
+body { font-family: var(--tmd-font); }
+
+.slide {
+  width: 33.867cm;
+  height: 19.05cm;
+  box-sizing: border-box;
+  padding: 48px 64px;
+  position: relative;
+  overflow: hidden;
+}
+.slide.dark { background: #0C0E1D; color: #fff; }
+.slide.light { background: #ffffff; color: #0C0E1D; }
+
+/* ---------- LTR (default) ---------- */
+.page-num {
+  position: absolute;
+  top: 48px;
+  right: 64px;
+  font-size: 13px;
+  font-weight: 500;
+  }
+.slide.dark .page-num { color: #f0f2f9; }
+.slide.light .page-num { color: #2f3e75; }
+
+.header {
+  position: absolute;
+  top: 48px;
+  left: 64px;
+  text-align: left;
+  max-width: 700px;
+}
+.header .crumb {
+  font-size: 24px;          /* 18pt */
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.slide.dark .header .crumb { color: #fcbf2c; }
+.slide.light .header .crumb { color: #2f3e75; }
+.header .title {
+  font-size: 37px;          /* 28pt */
+  font-weight: 700;
+  line-height: 1.15;
+}
+.header .subtitle {
+  font-size: 24px;          /* 18pt */
+  font-weight: 500;
+  margin-top: 6px;
+}
+.slide.dark .header .subtitle { color: #fcbf2c; }
+.slide.light .header .subtitle { color: #29366C; }   /* BRAND RULE: subtitle on light slides is Primary Blue */
+
+.footnote {
+  position: absolute;
+  bottom: 28px;
+  left: 64px;
+  font-size: 11px;
+  color: #2f3e75;
+  }
+
+.logo-mark {
+  position: absolute;
+  bottom: 28px;
+  right: 64px;
+  height: 28px;
+  opacity: 0.85;
+}
+
+/* ---------- RTL (Arabic) — mirror ---------- */
+.slide.rtl .page-num { right: auto; left: 64px; }
+.slide.rtl .header   { left: auto;  right: 64px; text-align: right; }
+.slide.rtl .footnote { left: auto;  right: 64px; }
+.slide.rtl .logo-mark { right: auto; left: 64px; }

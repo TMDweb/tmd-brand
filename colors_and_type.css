@@ -1,0 +1,246 @@
+/* ============================================================
+   TMD — The Marketing Department
+   Foundations: Colors & Typography
+   Source: TMD_Presentation_Master_Guidelines.txt + TMD Color Palette.pdf
+   ============================================================ */
+
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  src: url("fonts/IBMPlexSansArabic-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* IBM Plex Sans Arabic family is also published on Google Fonts; this
+   covers the additional weights (300, 500, 600, 700) that the brand
+   guidelines reference but aren't bundled in the uploaded TTF. */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap");
+
+/* ============================================================
+   BRAND RULE — CHARACTER SPACING (TRACKING)
+   ============================================================
+   Strictly prohibited: any non-normal letter-spacing on ANY text.
+   This applies to ALL brand materials — headings, subheadings, body,
+   footnotes, websites, presentations, every asset. No "tight" and no
+   "loose" tracking under any circumstances. The override below
+   enforces the rule globally even if a stale declaration slips in.
+   ============================================================ */
+*, *::before, *::after { letter-spacing: normal !important; }
+
+:root {
+  /* ---------- CORE (4) ------------------------------------- */
+  --tmd-dark:          #0C0E1D;  /* Official Dark — replaces pure black */
+  --tmd-white:         #ffffff;
+  --tmd-blue:          #29366C;  /* Primary Blue — ONLY on white */
+  --tmd-gold:          #fcbf2c;  /* Accent Gold */
+
+  /* ---------- SECONDARY · DARK SHADES (4) ----------------- */
+  --tmd-blue-dark:     #2f3e75;
+  --tmd-gold-dark:     #dd9c03;
+  --tmd-red-dark:      #92112d;
+  --tmd-teal-dark:     #33716b;
+
+  /* ---------- SECONDARY · LIGHT SHADES (4) ---------------- */
+  --tmd-blue-light:    #f0f2f9;
+  --tmd-gold-light:    #fff9eb;
+  --tmd-red-light:     #fdedf0;
+  --tmd-teal-light:    #f1f9f8;
+
+  /* ---------- EXTRA (2) ----------------------------------- */
+  --tmd-section-num:   #141B36;  /* Massive section numbers on dark */
+  --tmd-gray-100:      #F2F2F2;  /* Neutral hairline / surface */
+
+  /* ---------- LEGACY ALIASES (kept for backward refs) ----- */
+  --tmd-gray-50:       #f0f2f9;
+  --tmd-blue-700:      #2f3e75;
+  --tmd-yellow-50:     #fff9eb;
+
+  /* ---------- SEMANTIC — LIGHT MODE (white bg) ------------ */
+  --tmd-bg:            var(--tmd-white);
+  --tmd-fg:            var(--tmd-dark);
+  --tmd-fg-muted:      var(--tmd-blue-700);
+  --tmd-fg-subtle:     var(--tmd-gray-50);
+  --tmd-primary:       var(--tmd-blue);
+  --tmd-accent:        var(--tmd-gold);
+  --tmd-border:        var(--tmd-gray-50);
+  --tmd-surface:       var(--tmd-gray-50);   /* one-shade-deeper analytical boxes */
+
+  /* Data viz */
+  --tmd-data-views:    var(--tmd-teal-dark);
+  --tmd-data-engage:   var(--tmd-red-dark);
+  --tmd-data-publish:  var(--tmd-gold);
+
+  /* ---------- TYPE ---------------------------------------- */
+  --tmd-font:          "IBM Plex Sans Arabic", "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --tmd-font-mono:     "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Scale (px @1080-line slide / 16px web base) */
+  --tmd-size-cover:    96px;  /* Cover title — massive */
+  --tmd-size-section:  72px;  /* Section divider subsection */
+  --tmd-size-h1:       56px;  /* Slide main title — large bold */
+  --tmd-size-h2:       40px;
+  --tmd-size-h3:       28px;
+  --tmd-size-body:     20px;
+  --tmd-size-sm:       16px;  /* Subtitle / breadcrumb */
+  --tmd-size-xs:       12px;  /* Footnote / page number */
+  --tmd-size-stat:     128px; /* Statistical typography — massive bold */
+
+  --tmd-weight-bold:   700;
+  --tmd-weight-semi:   600;
+  --tmd-weight-med:    500;
+  --tmd-weight-reg:    400;
+  --tmd-weight-light:  300;
+
+  --tmd-track-tight:   0;       /* BRAND RULE: never tighten */
+  --tmd-track-normal:  0;
+  --tmd-track-wide:    0;       /* BRAND RULE: never loosen */
+
+  --tmd-leading-tight: 1.1;
+  --tmd-leading-snug:  1.25;
+  --tmd-leading-body:  1.5;
+
+  /* ---------- SPACING ------------------------------------- */
+  --tmd-space-1:       4px;
+  --tmd-space-2:       8px;
+  --tmd-space-3:       12px;
+  --tmd-space-4:       16px;
+  --tmd-space-5:       24px;
+  --tmd-space-6:       32px;
+  --tmd-space-7:       48px;
+  --tmd-space-8:       64px;
+  --tmd-space-9:       96px;
+  --tmd-safe-margin:   48px;   /* 0.5in @ ~96dpi */
+
+  /* ---------- RADII / BORDERS / LINES --------------------- */
+  /* TMD is a sharp, geometric system. Radii are SMALL by default. */
+  --tmd-radius-none:   0;
+  --tmd-radius-sm:     2px;
+  --tmd-radius-md:     4px;
+  --tmd-radius-pill:   999px;
+  --tmd-border-hair:   1px;
+  --tmd-border-thin:   2px;
+  --tmd-accent-line:   6px;   /* Cover accent gold horizontal line */
+
+  /* No shadow system — TMD forbids depth/gradients. Use borders + lines. */
+  --tmd-shadow-none:   none;
+}
+
+/* Dark mode tokens are applied with [data-theme="dark"] OR inside
+   a .tmd-dark surface. Both forms supported. */
+:root[data-theme="dark"],
+.tmd-dark {
+  --tmd-bg:            var(--tmd-dark);
+  --tmd-fg:            var(--tmd-white);
+  --tmd-fg-muted:      var(--tmd-gray-50);
+  --tmd-fg-subtle:     var(--tmd-blue-700);
+  --tmd-primary:       var(--tmd-gold);   /* Primary Blue forbidden on dark */
+  --tmd-accent:        var(--tmd-gold);
+  --tmd-border:        var(--tmd-blue-700);
+  --tmd-surface:       #141B36;            /* one-shade-deeper than --tmd-dark */
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT STYLES
+   ============================================================ */
+
+.tmd-body, body.tmd {
+  background: var(--tmd-bg);
+  color: var(--tmd-fg);
+  font-family: var(--tmd-font);
+  font-size: var(--tmd-size-body);
+  font-weight: var(--tmd-weight-reg);
+  line-height: var(--tmd-leading-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.tmd-h1, h1.tmd {
+  font-family: var(--tmd-font);
+  font-size: var(--tmd-size-h1);
+  font-weight: var(--tmd-weight-bold);
+  line-height: var(--tmd-leading-tight);
+  letter-spacing: var(--tmd-track-tight);
+  color: var(--tmd-fg);
+  margin: 0;
+}
+.tmd-h2, h2.tmd {
+  font-size: var(--tmd-size-h2);
+  font-weight: var(--tmd-weight-bold);
+  line-height: var(--tmd-leading-snug);
+  letter-spacing: var(--tmd-track-tight);
+  color: var(--tmd-fg);
+  margin: 0;
+}
+.tmd-h3, h3.tmd {
+  font-size: var(--tmd-size-h3);
+  font-weight: var(--tmd-weight-semi);
+  line-height: var(--tmd-leading-snug);
+  color: var(--tmd-fg);
+  margin: 0;
+}
+.tmd-subtitle {
+  font-size: var(--tmd-size-sm);
+  font-weight: var(--tmd-weight-med);
+  letter-spacing: var(--tmd-track-wide);
+  color: var(--tmd-accent);          /* gold on dark, set per-mode */
+  text-transform: none;
+}
+.tmd-dark .tmd-subtitle { color: var(--tmd-gold); }
+:root[data-theme="light"] .tmd-subtitle,
+.tmd-light .tmd-subtitle { color: var(--tmd-blue); }
+
+.tmd-breadcrumb {
+  font-size: var(--tmd-size-sm);
+  letter-spacing: var(--tmd-track-wide);
+  color: var(--tmd-blue-700);
+}
+.tmd-dark .tmd-breadcrumb { color: var(--tmd-gold); }
+
+.tmd-page-num {
+  font-size: var(--tmd-size-xs);
+  font-weight: var(--tmd-weight-med);
+  letter-spacing: var(--tmd-track-wide);
+  color: var(--tmd-blue-700);
+}
+.tmd-dark .tmd-page-num { color: var(--tmd-gray-50); }
+
+.tmd-footnote {
+  font-size: var(--tmd-size-xs);
+  color: var(--tmd-blue-700);
+}
+
+.tmd-stat-num {
+  font-size: var(--tmd-size-stat);
+  font-weight: var(--tmd-weight-bold);
+  line-height: 0.9;
+  letter-spacing: var(--tmd-track-tight);
+  color: var(--tmd-blue);
+}
+.tmd-dark .tmd-stat-num { color: var(--tmd-white); }
+.tmd-stat-unit {
+  font-size: var(--tmd-size-sm);
+  font-weight: var(--tmd-weight-med);
+  color: var(--tmd-blue-700);
+  letter-spacing: var(--tmd-track-wide);
+}
+.tmd-dark .tmd-stat-unit { color: var(--tmd-gold); }
+
+.tmd-badge {
+  display: inline-block;
+  background: var(--tmd-gold);
+  color: var(--tmd-dark);
+  font-size: var(--tmd-size-xs);
+  font-weight: var(--tmd-weight-semi);
+  letter-spacing: var(--tmd-track-wide);
+  padding: 6px 12px;
+  border-radius: var(--tmd-radius-sm);
+  text-transform: uppercase;
+}
+
+.tmd-accent-line {
+  display: block;
+  width: 96px;
+  height: var(--tmd-accent-line);
+  background: var(--tmd-gold);
+  border: 0;
+}

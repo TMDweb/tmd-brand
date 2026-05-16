@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TMD · Photo split</title>
+<link rel="stylesheet" href="slides.css">
+<style>
+  body { background: #f0f2f9; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+
+  /* PHOTO SPLIT
+     Half image, half content. Image on the leading edge.
+     Content panel sits on white. */
+  .ps-split { background: #fff; }
+  .ps-split .image {
+    position: absolute; left: 0; top: 0; bottom: 0; width: 50%;
+    overflow: hidden;
+  }
+  .ps-split .image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ps-split .panel {
+    position: absolute; right: 0; top: 0; bottom: 0; left: 56%;
+    padding: 80px 64px 80px 0;
+    display: flex; flex-direction: column; justify-content: center; gap: 18px;
+  }
+  .ps-split .panel .tag { font-size: 14px; font-weight: 700; color: #29366C; }
+  .ps-split .panel h2 { margin: 0; font-size: 36px; font-weight: 700; color: #0C0E1D; line-height: 1.15; max-width: 460px; }
+  .ps-split .panel p { margin: 0; font-size: 16px; line-height: 1.7; color: #0C0E1D; max-width: 460px; }
+  .ps-split .panel .stat {
+    display: flex; align-items: baseline; gap: 12px; margin-top: 14px;
+    padding-top: 16px; border-top: 4px solid #fcbf2c; width: fit-content;
+  }
+  .ps-split .panel .stat .n { font-size: 56px; font-weight: 700; color: #0C0E1D; }
+  .ps-split .panel .stat .l { font-size: 14px; color: #29366C; font-weight: 600; max-width: 200px; line-height: 1.4; }
+
+  /* Logo on the photo side, top corner */
+  .ps-split .page-num { color: #2f3e75; }
+</style>
+</head>
+<body>
+  <section data-screen-label="16 Photo split" class="slide light ps-split">
+    <div class="image"><img src="../assets/photos/meeting-1.jpg" alt=""></div>
+    <div class="page-num">16</div>
+    <div class="panel">
+      <span class="tag">CASE STUDY</span>
+      <h2>One brief, one team, twelve weeks</h2>
+      <p>The partner moved from a four-vendor stack to a single embedded pod. Briefs that used to take three weeks now ship inside seven days, and the leadership review fits on one page.</p>
+      <div class="stat">
+        <div class="n">3x</div>
+        <div class="l">Faster brief-to-ship versus the prior baseline</div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
