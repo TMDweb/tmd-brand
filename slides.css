@@ -1,7 +1,7 @@
 /* TMD slide foundation — 1280x720 base
    Default is LTR (English). For Arabic, add class="rtl" to the slide
    element, which mirrors the page number, header, and footnote. */
-@import url("../colors_and_type.css");
+@import url("colors_and_type.css");
 
 html, body { margin: 0; padding: 0; }
 body { font-family: var(--tmd-font); }
