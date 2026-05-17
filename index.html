@@ -113,11 +113,11 @@ section.block.dark > .inner {
   flex-wrap: wrap;
 }
 .sec-num {
-  font-family: var(--tmd-font); font-size: 13px; font-weight: 600;
-  color: #29366C;
+  font-family: var(--tmd-font); font-size: 40px; font-weight: 700;
+  color: var(--tmd-dark); line-height: 1.15; margin: 0 0 12px;
 }
-section.block.dark .sec-num { color: var(--tmd-gold); }
-.sec-title { font-size: 40px; font-weight: 700; margin: 0 0 12px; line-height: 1.15; }
+section.block.dark .sec-num { color: var(--tmd-white); }
+.sec-title { display: none; }
 .sec-sub { font-size: 18px; font-weight: 400; color: var(--tmd-blue-700); margin: 0; max-width: 560px; }
 section.block.dark .sec-sub { color: var(--tmd-gray-50); }
 
@@ -815,13 +815,6 @@ footer.foot b { color: var(--tmd-white); font-weight: 600; }
   <div class="hero-inner">
     <h1>دليل تنفيذ الهوية البصرية لـTMD</h1>
     <p class="lede">كامل التفاصيل مع النماذج وبرومت جاهز للنسخ</p>
-    <div class="meta">
-      <div>الإصدار<b>1.0</b></div>
-      <div>المنصة<b>TTP Company</b></div>
-      <div>الخط<b>IBM Plex Sans Arabic</b></div>
-      <div>المقاس<b>1280 × 720 px</b></div>
-      <div>الاتجاه<b>RTL / LTR</b></div>
-    </div>
   </div>
 </section>
 
@@ -830,8 +823,7 @@ footer.foot b { color: var(--tmd-white); font-weight: 600; }
   <div class="sec-head">
     <div>
       <div class="sec-num">01. القواعد الأساسية</div>
-      <h2 class="sec-title">قواعد صارمة لا تُكسر.</h2>
-      <p class="sec-sub">ثمانية بنود تحكم كل أصل بصري ينتجه TMD. لا استثناءات.</p>
+      <p class="sec-sub">التوجهات والقواعد الأساسية لتطبيق الهوية بشكل صحيح.</p>
     </div>
   </div>
   <div class="rules">
@@ -890,7 +882,6 @@ footer.foot b { color: var(--tmd-white); font-weight: 600; }
   <div class="sec-head">
     <div>
       <div class="sec-num">02. الشعار</div>
-      <h2 class="sec-title">شعار TMD</h2>
       <p class="sec-sub">يستخدم كما هو بدون إطار أو تأثيرات. ارتفاع موصى به 110–170 px.</p>
     </div>
   </div>
@@ -912,7 +903,6 @@ footer.foot b { color: var(--tmd-white); font-weight: 600; }
   <div class="sec-head">
     <div>
       <div class="sec-num">03. الألوان</div>
-      <h2 class="sec-title">14 لونًا فقط. لا غيرها.</h2>
       <p class="sec-sub">أربعة أساسية، أربعة ثانوية غامقة، أربعة ثانوية فاتحة، ولونان إضافيان. كل ما خارج هذه القائمة ممنوع. الأزرق الأساسي <span style="white-space:nowrap">#29366C</span> على الأبيض فقط.</p>
     </div>
   </div>
@@ -961,7 +951,6 @@ footer.foot b { color: var(--tmd-white); font-weight: 600; }
   <div class="sec-head">
     <div>
       <div class="sec-num">04. الطباعة</div>
-      <h2 class="sec-title">IBM Plex Sans Arabic. لا بدائل.</h2>
       <p class="sec-sub">عائلة واحدة لكل المحتوى العربي واللاتيني. الأوزان من 300 إلى 700. tracking دائمًا صفر.</p>
     </div>
   </div>
@@ -1009,7 +998,6 @@ footer.foot b { color: var(--tmd-white); font-weight: 600; }
   <div class="sec-head">
     <div>
       <div class="sec-num">05. المكونات</div>
-      <h2 class="sec-title">عناصر ثابتة، صريحة، حادة.</h2>
       <p class="sec-sub">شارات، أزرار، بطاقات إحصاء، فاصل متقطّع، مقارنات. كلها بدون ظلال وبدون تدرج.</p>
     </div>
   </div>
@@ -1084,8 +1072,7 @@ footer.foot b { color: var(--tmd-white); font-weight: 600; }
   <div class="sec-head">
     <div>
       <div class="sec-num">06. المساحات والتخطيط</div>
-      <h2 class="sec-title">مقاس واحد. هامش نصف بوصة.</h2>
-      <p class="sec-sub">قياس الشريحة 33.867 سم × 19.05 سم (1280 × 720 px). هامش آمن 48px من كل جهة. مساحات بيضاء سخية بين الأقسام.</p>
+      <p class="sec-sub">قياس الشريحة 33.867 سم × 19.05 سم (1280 × 720 px). هامش آمن 48px من كل جهة. مساحات آمنة بين الأقسام.</p>
     </div>
   </div>
 
@@ -1123,7 +1110,6 @@ footer.foot b { color: var(--tmd-white); font-weight: 600; }
   <div class="sec-head">
     <div>
       <div class="sec-num">07. رمز الريال السعودي</div>
-      <h2 class="sec-title">الرمز الرسمي فقط.</h2>
       <p class="sec-sub">لكل مبلغ بالريال السعودي، استخدم SVG الرسمي بـ <code style="font-family:var(--tmd-mono);">width="1em" height="1em" fill="currentColor"</code>. ممنوع كتابة SAR أو SR أو ر.س أو ﷼.</p>
     </div>
   </div>
@@ -1151,7 +1137,6 @@ footer.foot b { color: var(--tmd-white); font-weight: 600; }
   <div class="sec-head">
     <div>
       <div class="sec-num">08. الصور</div>
-      <h2 class="sec-title">صور من الميدان، لا من المخزون.</h2>
       <p class="sec-sub">قواعد استخدام الصور وخمس صيغ ثابتة للعرض. كل صورة بنسبة 16:9، وتُعالج بتظليل خفيف من الأسفل فقط عند الحاجة لقراءة النص.</p>
     </div>
   </div>
@@ -1275,7 +1260,6 @@ footer.foot b { color: var(--tmd-white); font-weight: 600; }
   <div class="sec-head">
     <div>
       <div class="sec-num">09. المعلومات البصرية</div>
-      <h2 class="sec-title">أرقام ضخمة، حدود نظيفة، حدّ أدنى من العناصر.</h2>
       <p class="sec-sub">الطباعة هي البيانات. الرسومات تخدمها، لا تتقدّم عليها. ممنوع التدرجات، الظلال، خطوط الشبكة الثقيلة، أو الأساطير المزدحمة.</p>
     </div>
   </div>
@@ -1444,7 +1428,6 @@ footer.foot b { color: var(--tmd-white); font-weight: 600; }
     <div class="sec-head">
       <div>
         <div class="sec-num">10. مكتبة القوالب</div>
-        <h2 class="sec-title">19 قالب شريحة. عربي وإنجليزي.</h2>
         <p class="sec-sub">لكل قالب نسخة LTR ونسخة RTL. لا تصنع تصميمًا جديدًا إذا كان أحد القوالب يفي بالغرض.</p>
       </div>
     </div>
@@ -1617,7 +1600,6 @@ footer.foot b { color: var(--tmd-white); font-weight: 600; }
   <div class="sec-head">
     <div>
       <div class="sec-num">11. نماذج الشرائح</div>
-      <h2 class="sec-title">معاينة عملية لبعض القوالب.</h2>
       <p class="sec-sub">عيّنات صغيرة على مقاس 1280×720. القوالب الكاملة في مجلد <code style="font-family:var(--tmd-mono)">slides/</code>.</p>
     </div>
   </div>
@@ -1677,8 +1659,7 @@ footer.foot b { color: var(--tmd-white); font-weight: 600; }
   <div class="sec-head">
     <div>
       <div class="sec-num">12. تطبيق الهوية على منصات الذكاء الاصطناعي</div>
-      <h2 class="sec-title">ثلاث خطوات. أي منصة. أي طلب.</h2>
-      <p class="sec-sub">شارك المستودع، الصق البرومت، اطلب ما تشاء — يلتزم الذكاء الاصطناعي بكل القواعد تلقائيًا.</p>
+      <p class="sec-sub">بس انسخ الموجود والصق في أي منصة ذكالي وراح تتطبق معك الهوية بشكل صحيح إن شاء الله</p>
     </div>
   </div>
 
